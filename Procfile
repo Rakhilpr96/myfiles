@@ -1,1 +1,1 @@
-web: gunicorn flask:app log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), router))
+web: gunicorn --bind 0.0.0.0:$PORT flask:app
